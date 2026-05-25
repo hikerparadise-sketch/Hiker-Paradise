@@ -14,6 +14,37 @@
       line-height: 1.6;
     }
 
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(10,10,10,0.9);
+      border-bottom: 1px solid #2a2a2a;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      color: #d6c3a5;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #ddd2bf;
+      margin-left: 15px;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
     header {
       height: 100vh;
       display: flex;
@@ -100,47 +131,54 @@
       text-decoration: none;
       border-radius: 10px;
     }
+
+    /* spacing fix for fixed nav */
+    .spacer {
+      height: 60px;
+    }
   </style>
 </head>
 
 <body>
 
+<nav>
+  <div class="logo">Hiker Paradise</div>
+  <div>
+    <a href="#mission">Mission</a>
+    <a href="#vision">Vision</a>
+    <a href="#join">Join</a>
+  </div>
+</nav>
+
+<div class="spacer"></div>
+
 <header>
   <div>
     <h1>Hiker Paradise</h1>
     <p class="subtitle">
-      A wilderness fellowship seeking to return to prayer, repentance, obedience to Jesus Christ,
-      and simple living in the mountains.
+      A wilderness movement calling believers to repentance, prayer,
+      self-reliance, and the formation of a mountain refuge community.
     </p>
     <a class="button" href="#vision">Enter The Vision</a>
   </div>
 </header>
 
-<section class="dark">
+<section id="mission" class="dark">
   <div class="container grid">
 
     <div class="card">
-      <h2>The Gospel</h2>
-      <p>
-        A call to repentance, obedience, prayer, and discipleship in Jesus Christ,
-        apart from empty religious systems.
-      </p>
+      <h2>The Gospel Call</h2>
+      <p>Return to repentance, obedience to Jesus Christ, prayer, and true discipleship.</p>
     </div>
 
     <div class="card">
-      <h2>The Wilderness Refuge</h2>
-      <p>
-        A future mountain gathering place where believers can camp,
-        pray, study scripture, and seek the Lord together.
-      </p>
+      <h2>The Movement</h2>
+      <p>A growing fellowship of believers seeking simplicity, truth, and separation from worldly systems.</p>
     </div>
 
     <div class="card">
       <h2>Self-Reliance</h2>
-      <p>
-        Encouraging food production, survival skills, off-grid living,
-        and mutual support among believers.
-      </p>
+      <p>Food production, wilderness skills, preparedness, and mutual support among believers.</p>
     </div>
 
   </div>
@@ -150,23 +188,27 @@
   <div class="container vision">
     <h2>The Mountain Vision</h2>
     <p>
-      The long-term goal is to establish a prayer-centered fellowship on mountain land
-      where believers can gather in tents, live simply, and dedicate time to prayer,
-      scripture, and preparation for difficult times.
+      The goal is to establish a physical mountain headquarters where believers can gather
+      in tents, pray, work, and build a shared life centered on scripture, prayer, and simplicity.
     </p>
   </div>
 </section>
 
-<section class="dark">
+<section class="dark" id="join">
   <div class="scripture container">
     “Come ye yourselves apart into a desert place, and rest a while.”
     <br><br>
     — Mark 6:31 (KJV)
   </div>
+
+  <div class="container" style="text-align:center;margin-top:40px;">
+    <h2>Join The Movement</h2>
+    <p>More structure and communication tools will be added as the fellowship grows.</p>
+  </div>
 </section>
 
 <footer>
-  Hiker Paradise • Wilderness Fellowship • Mountain Vision
+  Hiker Paradise • A Wilderness Movement
 </footer>
 
 </body>
