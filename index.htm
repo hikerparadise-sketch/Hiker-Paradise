@@ -1,13 +1,173 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hiker Paradise</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background: #0f0f0f;
+      color: #e8dfcc;
+      line-height: 1.6;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+        url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+
+    h1 {
+      font-size: 4rem;
+      color: #d6c3a5;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 1.4rem;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #ddd2bf;
+    }
+
+    section {
+      padding: 80px 20px;
+    }
+
+    .dark {
+      background: #161616;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #1c1c1c;
+      padding: 25px;
+      border-radius: 16px;
+      border: 1px solid #333;
+    }
+
+    h2 {
+      color: #d6c3a5;
+    }
+
+    .vision {
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .scripture {
+      text-align: center;
+      font-style: italic;
+      font-size: 1.6rem;
+      color: #e5d7bc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      border-top: 1px solid #2a2a2a;
+      color: #8f826f;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 28px;
+      background: #5b4b32;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+    }
+  </style>
 </head>
-<body style="background:black;color:white;font-family:Georgia;text-align:center;padding-top:100px;">
 
-<h1>Hiker Paradise</h1>
+<body>
 
-<p>The wilderness fellowship website is under construction.</p>
+<header>
+  <div>
+    <h1>Hiker Paradise</h1>
+    <p class="subtitle">
+      A wilderness fellowship seeking to return to prayer, repentance, obedience to Jesus Christ,
+      and simple living in the mountains.
+    </p>
+    <a class="button" href="#vision">Enter The Vision</a>
+  </div>
+</header>
+
+<section class="dark">
+  <div class="container grid">
+
+    <div class="card">
+      <h2>The Gospel</h2>
+      <p>
+        A call to repentance, obedience, prayer, and discipleship in Jesus Christ,
+        apart from empty religious systems.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>The Wilderness Refuge</h2>
+      <p>
+        A future mountain gathering place where believers can camp,
+        pray, study scripture, and seek the Lord together.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Self-Reliance</h2>
+      <p>
+        Encouraging food production, survival skills, off-grid living,
+        and mutual support among believers.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="vision">
+  <div class="container vision">
+    <h2>The Mountain Vision</h2>
+    <p>
+      The long-term goal is to establish a prayer-centered fellowship on mountain land
+      where believers can gather in tents, live simply, and dedicate time to prayer,
+      scripture, and preparation for difficult times.
+    </p>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="scripture container">
+    “Come ye yourselves apart into a desert place, and rest a while.”
+    <br><br>
+    — Mark 6:31 (KJV)
+  </div>
+</section>
+
+<footer>
+  Hiker Paradise • Wilderness Fellowship • Mountain Vision
+</footer>
 
 </body>
 </html>
