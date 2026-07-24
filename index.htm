@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Trail Church connects independent Christian preachers with transparent, product-based support.">
+  <title>Trail Church | See the need. Fund the item. Follow the story.</title>
+  <style>
+    :root { --ink:#16352b; --forest:#215a43; --cream:#fbf8f0; --sand:#eee5d2; --gold:#d69b42; --muted:#607067; --line:#d8ddcf; --white:#fffdf8; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--cream); font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:inherit; }
+    .wrap { max-width:1120px; margin:auto; padding:0 24px; }
+    .top { position:sticky; top:0; z-index:10; background:rgba(255,253,248,.96); border-bottom:1px solid var(--line); backdrop-filter:blur(10px); }
+    nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { text-decoration:none; display:flex; align-items:center; gap:10px; font-family:Georgia,serif; font-size:1.25rem; font-weight:700; }
+    .mark { display:grid; place-items:center; width:33px; height:33px; border-radius:50% 50% 46% 46%; color:white; background:var(--forest); font-size:.9rem; }
+    .nav-links { display:flex; gap:23px; align-items:center; color:#3f5448; font-size:.94rem; }
+    .nav-links a { text-decoration:none; }
+    .button { display:inline-block; border:0; border-radius:7px; padding:12px 18px; background:var(--forest); color:white; font-weight:700; text-decoration:none; cursor:pointer; }
+    .button:hover { background:#174633; }
+    .button.alt { background:transparent; border:1px solid #9daaa0; color:var(--ink); }
+    .hero { padding:78px 0 68px; background:linear-gradient(118deg,rgba(17,52,39,.95),rgba(21,70,51,.8)),url('https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1800&q=80') center/cover; color:white; }
+    .eyebrow { text-transform:uppercase; letter-spacing:.12em; font-size:.75rem; font-weight:800; color:#e8c27e; }
+    h1,h2,h3 { font-family:Georgia,serif; line-height:1.12; margin:0; }
+    h1 { max-width:700px; margin:14px 0 20px; font-size:clamp(2.7rem,6vw,5rem); }
+    .hero p { max-width:630px; margin:0; color:#edf2e9; font-size:1.16rem; }
+    .hero-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:30px; }
+    .hero .button { background:#e4b55e; color:#17382d; }
+    .hero .button.alt { border-color:#d9e1d5; color:white; }
+    .trust { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:#ccd6c7; border:1px solid #ccd6c7; margin-top:-1px; }
+    .trust div { padding:21px 24px; background:var(--white); }
+    .trust strong { display:block; font:700 1.02rem Georgia,serif; }
+    .trust span { display:block; color:var(--muted); font-size:.88rem; }
+    section { padding:76px 0; }
+    .heading { max-width:690px; margin-bottom:32px; }
+    h2 { font-size:clamp(2rem,4vw,3rem); margin-top:8px; }
+    .heading p { color:var(--muted); font-size:1.05rem; }
+    .needs { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .need { overflow:hidden; border:1px solid var(--line); border-radius:12px; background:var(--white); box-shadow:0 7px 22px rgba(21,53,39,.06); }
+    .need-image { height:155px; display:grid; place-items:center; background:linear-gradient(145deg,#d7e1ce,#a2ba9d); font-size:3.5rem; }
+    .need-body { padding:20px; }
+    .tag { display:inline-block; padding:3px 8px; border-radius:20px; background:#eef3e9; color:#326248; font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:.06em; }
+    h3 { font-size:1.35rem; margin:10px 0 7px; }
+    .need p { margin:0 0 16px; color:var(--muted); font-size:.93rem; }
+    .fund-line { display:flex; justify-content:space-between; font-size:.86rem; font-weight:700; }
+    progress { width:100%; height:8px; margin:8px 0 14px; accent-color:var(--gold); }
+    .ledger { padding:12px 0 0; border-top:1px solid var(--line); color:#466052; font-size:.83rem; }
+    .ledger b { color:var(--ink); }
+    .steps { background:#edf2e9; }
+    .step-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+    .step { padding:20px 4px 0; border-top:3px solid #c3d2bf; }
+    .step em { display:block; color:var(--forest); font-style:normal; font-size:.8rem; font-weight:800; letter-spacing:.09em; }
+    .step h3 { font-size:1.2rem; }
+    .step p { margin:8px 0 0; color:#55685d; font-size:.92rem; }
+    .proof { display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center; }
+    .receipt { padding:28px; background:var(--white); border:1px solid var(--line); border-radius:12px; box-shadow:0 12px 30px rgba(21,53,39,.09); }
+    .receipt-head { display:flex; justify-content:space-between; padding-bottom:15px; border-bottom:1px solid var(--line); }
+    .receipt-row { display:flex; justify-content:space-between; gap:15px; padding:10px 0; border-bottom:1px solid #edf0e9; }
+    .receipt-total { font-weight:800; font-size:1.1rem; }
+    .safe { margin-top:17px; padding:12px; background:#edf4eb; color:#365942; border-radius:7px; font-size:.87rem; }
+    .cta { text-align:center; background:var(--ink); color:white; }
+    .cta h2 { max-width:650px; margin:10px auto 17px; }
+    .cta p { max-width:600px; margin:0 auto 25px; color:#d5e2d8; }
+    .cta .button { background:#e4b55e; color:#17382d; }
+    footer { padding:28px 0; background:#10271f; color:#c3d2c7; font-size:.88rem; }
+    footer .wrap { display:flex; justify-content:space-between; gap:15px; }
+    @media (max-width:800px) { .nav-links a:not(.button){display:none}.needs,.step-grid,.proof{grid-template-columns:1fr 1fr}.proof{gap:28px}.proof>div:first-child{grid-column:1/-1}.trust{grid-template-columns:1fr}.trust div{padding:15px 24px} }
+    @media (max-width:540px) { .needs,.step-grid,.proof{grid-template-columns:1fr}.hero{padding:60px 0}.nav-links{gap:8px}.nav-links .button{padding:10px 12px;font-size:.85rem} footer .wrap{display:block} }
+  </style>
+</head>
+<body>
+  <header class="top"><nav class="wrap"><a class="brand" href="#top"><span class="mark">✦</span> Trail Church</a><div class="nav-links"><a href="#needs">Current needs</a><a href="#how">How it works</a><a href="#proof">Transparency</a><a class="button" href="#join">Join Trail Church</a></div></nav></header>
+  <main id="top">
+    <section class="hero"><div class="wrap"><div class="eyebrow">Transparent ministry support</div><h1>See the need. Fund the item. Follow the story.</h1><p>Trail Church connects independent Christian preachers with supporters who want every gift tied to a specific, visible ministry need.</p><div class="hero-actions"><a class="button" href="#needs">View current needs</a><a class="button alt" href="#how">How it works</a></div></div></section>
+    <div class="wrap"><div class="trust"><div><strong>Specific items</strong><span>Each need names the exact product, quantity, and cost.</span></div><div><strong>Public funding ledger</strong><span>Supporters choose a public username for every contribution.</span></div><div><strong>Proof of fulfillment</strong><span>Receipts and delivery updates close every funding story.</span></div></div></div>
+    <section id="needs"><div class="wrap"><div class="heading"><div class="eyebrow">Examples of active needs</div><h2>Ministry needs you can see clearly.</h2><p>These are sample needs for the first Trail Church website. In the full system, each one will link to the exact approved product and its public receipt after purchase.</p></div><div class="needs">
+      <article class="need"><div class="need-image">📚</div><div class="need-body"><span class="tag">Bibles</span><h3>Two cases of KJV Bibles</h3><p>For a summer outreach and discipleship table in the Appalachian region.</p><div class="fund-line"><span>$64 funded</span><span>$84 goal</span></div><progress value="64" max="84">76%</progress><a class="button" href="need.html?need=bibles">View this need</a><div class="ledger"><b>Recent supporters:</b> WalkingByFaith $20 · BibleRunner $44</div></div></article>
+      <article class="need"><div class="need-image">🥾</div><div class="need-body"><span class="tag">Equipment</span><h3>Backpacking water filter</h3><p>For a preacher serving along remote hiking routes and campsites.</p><div class="fund-line"><span>$18 funded</span><span>$40 goal</span></div><progress value="18" max="40">45%</progress><a class="button" href="need.html?need=filter">View this need</a><div class="ledger"><b>Recent supporters:</b> MountainWitness $18</div></div></article>
+      <article class="need"><div class="need-image">⛽</div><div class="need-body"><span class="tag">Travel</span><h3>Fuel for rural visits</h3><p>A product-backed fuel-card need for three days of ministry travel.</p><div class="fund-line"><span>$100 funded</span><span>$100 goal</span></div><progress value="100" max="100">100%</progress><a class="button alt" href="need.html?need=fuel">View fulfillment</a><div class="ledger"><b>Funded by:</b> CedarPath $25 · GraceRoad $75</div></div></article>
+    </div></div></section>
+    <section class="steps" id="how"><div class="wrap"><div class="heading"><div class="eyebrow">The Trail Church promise</div><h2>Every need has a visible path.</h2></div><div class="step-grid"><div class="step"><em>01 · REQUEST</em><h3>Preacher submits</h3><p>A preacher requests an exact item and explains its ministry purpose.</p></div><div class="step"><em>02 · REVIEW</em><h3>Need is verified</h3><p>Trail Church reviews the product, cost, quantity, and delivery details.</p></div><div class="step"><em>03 · FUND</em><h3>People give openly</h3><p>Contributions appear under chosen usernames on the public funding ledger.</p></div><div class="step"><em>04 · FULFILL</em><h3>Purchase is documented</h3><p>Staff place the order, then publish a redacted receipt and delivery update.</p></div></div></div></section>
+    <section id="proof"><div class="wrap proof"><div><div class="eyebrow">Nothing disappears</div><h2>Public proof, without exposing private information.</h2><p>Every fulfilled need receives a simple public record: what was purchased, the final cost, the date, and the delivery status. Personal delivery and payment details remain private.</p><p>When an item sells out or costs more than expected, the need moves to review. Funds are never silently redirected.</p></div><div class="receipt"><div class="receipt-head"><b>Trail Church fulfillment record</b><span>✓ Purchased</span></div><div class="receipt-row"><span>Fuel card — rural visits</span><span>$100.00</span></div><div class="receipt-row"><span>Order date</span><span>Sample record</span></div><div class="receipt-row receipt-total"><span>Final total</span><span>$100.00</span></div><div class="safe">Public version: item, cost, and status shown. Delivery address, legal name, payment details, and raw retailer order number withheld.</div></div></div></section>
+    <section class="cta" id="join"><div class="wrap"><div class="eyebrow">Build with us</div><h2>Help make ministry support more direct and more accountable.</h2><p>Trail Church is beginning as a transparent product-based support platform for independent Christian preachers.</p><a class="button" href="mailto:hello@trailchurch.org?subject=Trail%20Church%20interest">I want to learn more</a></div></section>
+  </main>
+  <footer><div class="wrap"><span>Trail Church · Transparent ministry support</span><span>First website concept · 2026</span></div></footer>
+</body>
+</html>
